@@ -9,15 +9,17 @@ import { Shoes } from './shoes';
 })
 export class ManagerService {
 
-  firstShoe: Shoes { brand: 'Nike', color: 'blue' }
-  secondShoe: Shoes { brand: 'Addidas', color: 'black' }
+  firstShoe: Shoes = { brand: 'Nike', color: 'blue' };
+  secondShoe: Shoes = { brand: 'Adidas', color: 'black' };
   
-  myShoes: Shoes[] = [this.firstShoe, this.secondShoe];
+  myShoes:Shoes[] = [this.firstShoe, this.secondShoe];
 
   /* Methods within the class body of the service are used to export data out of the service */
+  
+
+  constructor() { }
+
   getShoes() {
     return this.myShoes;
   }
-
-  constructor() { }
 }
